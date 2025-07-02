@@ -47,7 +47,7 @@ class Formula:
 
 def tokenize(s: str):
     s = s.replace(' ', '')
-    token_pattern = r'->|[~()]+|[A-Za-z][A-Za-z0-9_]*'
+    token_pattern = r'->|[~()]|[A-Za-z][A-Za-z0-9_]*'
     return re.findall(token_pattern, s)
 
 def parse_formula(s: str) -> Formula:
